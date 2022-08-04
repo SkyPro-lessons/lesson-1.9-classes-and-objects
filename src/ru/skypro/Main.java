@@ -12,35 +12,27 @@ public class Main {
         Book threeMusketeers = new Book("Три мушкетера", duma, 2044);
         Book warAndPeace = new Book("Война и мир", tolstoi, 1865);
         Book ruslanAndLudmila = new Book("Руслан и Людмила", pushkin, 1820);
-
-        Book[] books = new Book[5];
-
-        addBook(books, threeMusketeers);
-        addBook(books, warAndPeace);
-        addBook(books, ruslanAndLudmila);
-
-        printBooksFromArray(books);
-
-
-
         threeMusketeers.setPublishedYear(1844);
+
+        Library library = new Library(5);
+
+        library.addBook(threeMusketeers);
+        library.addBook(warAndPeace);
+        library.addBook(ruslanAndLudmila);
+
+        library.printBooks();
+        System.out.println();
+
+        library.printBookByBookName("Три мушкетера");
+        library.printBookByBookName("Красная шапочка");
+        System.out.println();
+
+        library.setPublishedYearByBookName("Три мушкетера", 1845);
+
+
+
+
     }
 
-    private static void printBooksFromArray(Book[] books) {
-        for (Book book : books) {
-            if (book != null) {
-                book.printBookFullName();
-            }
-        }
-    }
 
-    public static void addBook(Book[] books, Book book) {
-        for (int i = 0; i < books.length; i++) {
-            if (books[i] == null) {
-                books[i] = book;
-                break;
-            }
-        }
-
-    }
 }

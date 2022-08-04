@@ -1,8 +1,8 @@
 package ru.skypro;
 
 public class Book {
-    private String name;
-    private Author author;
+    private final String name;
+    private final Author author;
     private int publishedYear;
 
     public Book(String name, Author author, int publishedYear) {
@@ -33,5 +33,9 @@ public class Book {
 
     public void printBookFullName() {
         System.out.println(this.getAuthorFullName() + ": " + this.getName() + ": " + this.getPublishedYear());
+    }
+
+    public void printBookFullNamePublicStyle() {
+        System.out.println(this.getName() + " by " + this.getAuthorFullName() + " was published in " + this.getPublishedYear());
     }
 }
