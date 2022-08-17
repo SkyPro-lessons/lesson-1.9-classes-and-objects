@@ -19,6 +19,10 @@ public class Book {
         return author;
     }
 
+    public String getAuthorFullName() {
+        return this.author.getFirstName() + " " + this.author.getLastName();
+    }
+
     public int getPublishedYear() {
         return publishedYear;
     }
@@ -27,4 +31,11 @@ public class Book {
         this.publishedYear = publishedYear;
     }
 
+    public void printBookFullName() {
+        System.out.println(this.getAuthorFullName() + ": " + this.getName() + ": " + this.getPublishedYear());
+    }
+
+    public void printBookFullNamePublicStyle() {
+        System.out.println(this.getName() + " by " + this.getAuthorFullName() + " was published in " + this.getPublishedYear());
+    }
 }
