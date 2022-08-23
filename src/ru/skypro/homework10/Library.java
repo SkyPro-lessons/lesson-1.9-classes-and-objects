@@ -57,4 +57,15 @@ public class Library {
             foundBook.setPublishedYear(newPublishedYear);
         }
     }
+
+    @Override
+    public String toString() {
+        System.out.println("Library:");
+        for (Book book : books) {
+            if (book != null) {
+                System.out.println(book);
+            }
+        }
+        return "";
+    }
 }

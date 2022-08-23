@@ -1,4 +1,4 @@
-package ru.skypro;
+package ru.skypro.homework09;
 
 public class Author {
     private final String firstName;

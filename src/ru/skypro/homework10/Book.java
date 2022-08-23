@@ -38,12 +38,20 @@ public class Book {
     }
 
     public void printBookFullNamePublicStyle() {
-        System.out.println(this.getName() + " by " + this.getAuthorFullName() + " was published in " + this.getPublishedYear());
+        System.out.println(getBookFullNamePublicStyle());
+    }
+
+    public String getBookFullNamePublicStyle() {
+        return this.getName() + " by " + this.getAuthorFullName() + " was published in " + this.getPublishedYear();
+    }
+
+    public String getBookNameWithAuthor() {
+        return this.getName() + " by Author: " + this.getAuthorFullName();
     }
 
     @Override
     public String toString() {
-        return "Книга: " + name + ", " + author.toString() + ", " + publishedYear;
+        return "Book: " + getBookNameWithAuthor();
     }
 
     @Override

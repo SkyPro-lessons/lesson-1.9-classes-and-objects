@@ -1,6 +1,4 @@
-package ru.skypro;
-
-import java.util.Arrays;
+package ru.skypro.homework09;
 
 public class Main {
 
