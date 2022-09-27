@@ -1,4 +1,4 @@
-package ru.skypro;
+package ru.skypro.homework09;
 
 public class Book {
     private final String name;
